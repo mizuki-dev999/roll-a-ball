@@ -10,7 +10,7 @@ public class GameController : MonoBehaviour
     public void Update()
     {
         int count = GameObject.FindGameObjectsWithTag("Item").Length;
-        scoreLabel.text = count.ToString();
+        scoreLabel.text = $"{count} items left";
         if(count == 0)
         {
             //ƒNƒŠƒA->winnerLabel‚ð•\Ž¦

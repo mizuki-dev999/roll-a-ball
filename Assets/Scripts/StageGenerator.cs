@@ -17,8 +17,9 @@ public class StageGenerator : MonoBehaviour
     [SerializeField, Label("加速床(左)")] GameObject leftAccelPoint;
     [SerializeField, Label("加速床(右)")] GameObject rightdAccelPoint;
     [Header("ステージ生成用")]
-    [SerializeField, Label("生成したいステージの番号を入力")] int generateStageId = 0;
-    [SerializeField, Label("ステージデータ")] StageData[] stageDatas = null;
+    //[SerializeField, Label("生成したいステージの番号を入力")] int generateStageId = 0;
+    //[SerializeField, Label("ステージデータ")] StageData[] stageDatas = null;
+    [SerializeField, Label("生成したいステージデータをセット")] StageData stageData = null;
     [Header("オブジェクト生成親")]
     public GameObject walls;
     public GameObject dangerWalls;
@@ -28,11 +29,7 @@ public class StageGenerator : MonoBehaviour
 
     void Start()
     {
-        //プレイヤーオブジェクトとカメラの位置を初期化
-        playerObject.transform.position = new Vector3(stageDatas[generateStageId].startPosision_x - 9.5f, 1, stageDatas[generateStageId].startPosision_y - 9.5f);
-        mainCamera.transform.position = new Vector3(playerObject.transform.position.x, 9, playerObject.transform.position.z-5);
-        //ステージを生成
-        GenerateStage(stageDatas[generateStageId]);
+        if(stageData != null)GenerateStage(stageData); //ステージを生成
     }
 
     /// <summary>
@@ -41,8 +38,11 @@ public class StageGenerator : MonoBehaviour
     /// <param name="stageData">ステージデータ(ScriptalObject)</param>
     public void GenerateStage(StageData stageData)
     {
-
-        int[][] objectPosisionDates = CsvReader(stageData.csvFile); // csvファイルを二次元配列に変換する
+        //初期化
+        InitializePlayerPosition(stageData);
+        InitializeMainCameraPosition();
+        //csvファイルを二次元配列に変換する
+        int[][] objectPosisionDates = CsvReader(stageData.csvFile);
         for (int y = 0; y<objectPosisionDates.Length; y++)
         {
             for(int x = 0; x<objectPosisionDates[y].Length; x++)
@@ -50,6 +50,22 @@ public class StageGenerator : MonoBehaviour
                 DeployObject(objectPosisionDates[y][x], x, y); // オブジェクトを設置する
             }
         }
+    }
+
+    /// <summary>
+    /// プレイヤーオブジェクトの位置を初期化
+    /// </summary>
+    private void InitializePlayerPosition(StageData stageData)
+    {
+        playerObject.transform.position = new Vector3(stageData.startPosision_x - 9.5f, 1, stageData.startPosision_y - 9.5f);
+    }
+
+    /// <summary>
+    /// カメラの位置を初期化
+    /// </summary>
+    private void InitializeMainCameraPosition()
+    {
+        mainCamera.transform.position = new Vector3(playerObject.transform.position.x, 9, playerObject.transform.position.z - 5);
     }
 
     /// <summary>

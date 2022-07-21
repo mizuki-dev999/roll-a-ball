@@ -188,7 +188,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &134721264
 GameObject:
@@ -585,7 +585,7 @@ RectTransform:
   - {fileID: 1362045520}
   - {fileID: 386211907}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -720,7 +720,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &664864149
 Rigidbody:
@@ -811,7 +811,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &862579533
 GameObject:
@@ -846,7 +846,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 57.995, y: 0, z: 0}
 --- !u!114 &862579535
 MonoBehaviour:
@@ -1514,7 +1514,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 60, y: 0, z: 0}
 --- !u!114 &1441550259
 MonoBehaviour:
@@ -1767,7 +1767,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1629415659
 GameObject:
@@ -1864,7 +1864,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1977764646
 GameObject:
@@ -1905,10 +1905,7 @@ MonoBehaviour:
   backForwardAccelPoint: {fileID: 7152724483047519521, guid: 4b827be4fde00d144ad1d47ac95f335c, type: 3}
   leftAccelPoint: {fileID: 7152724483047519521, guid: 768cab935da91ae41a3f6cd6188c2627, type: 3}
   rightdAccelPoint: {fileID: 7152724483047519521, guid: 231498accbb978b45bb1bfee5a262a12, type: 3}
-  generateStageId: 1
-  stageDatas:
-  - {fileID: 11400000, guid: e8d2236678d373945aee82d2534938f8, type: 2}
-  - {fileID: 11400000, guid: 08981c66c9bc3cc4a931e9288741ed56, type: 2}
+  stageData: {fileID: 11400000, guid: 08981c66c9bc3cc4a931e9288741ed56, type: 2}
   walls: {fileID: 400887757}
   dangerWalls: {fileID: 1629415659}
   items: {fileID: 671486076}
@@ -1927,7 +1924,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2010181688
 GameObject:
